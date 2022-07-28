@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+main {
+  height: 100vh;
+  width: 100vw;
+
+  font-family: 'Times New Roman', Times, serif;
+  background-color: hsl(80, 10%, 90%);
+
+  .container {
+    height: 560px;
+    width: 900px;
+    background-color: hsl(80, 10%, 96%);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    position: relative;
+
+    #title {
+      font-size: 2.5em;
+    }
+
+    .visual {
+      position: absolute;
+      top: 6em;
+
+      #tooltip {
+        position: absolute;
+        width: 150px;
+        height: 50px;
+        padding: 2px;
+        font: 12px;
+        background: lightsteelblue;
+        box-shadow: 1px 1px 10px;
+        border-radius: 2px;
+        pointer-events: none;
+        opacity: 0;
+      }
+
+      path {
+        stroke: black;
+        stroke-width: 1;
+        fill: none;
+      }
+
+      .svg-info {
+        font-size: 0.8em;
+      }
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  .container {
+    box-shadow: 2px 2px 20px;
+  }
+}
